@@ -1,27 +1,32 @@
 import { motion } from "motion/react";
 import { Code, Server, Palette, Wrench } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function About() {
   const highlights = [
     {
       icon: Code,
       title: "MERN Stack Development",
-      description: "Building full-stack applications with MongoDB, Express, React, and Node.js",
+      description:
+        "Building full-stack applications with MongoDB, Express, React, and Node.js",
     },
     {
       icon: Server,
       title: "Backend Expertise",
-      description: "Passionate about creating scalable backend systems and troubleshooting complex issues",
+      description:
+        "Passionate about creating scalable backend systems and troubleshooting complex issues",
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "Crafting intuitive and beautiful user interfaces that delight users",
+      description:
+        "Crafting intuitive and beautiful user interfaces that delight users",
     },
     {
       icon: Wrench,
       title: "WordPress Development",
-      description: "Experienced in custom WordPress development and freelancing projects",
+      description:
+        "Experienced in custom WordPress development and freelancing projects",
     },
   ];
 
@@ -44,27 +49,47 @@ export function About() {
 
           <div className="max-w-3xl mx-auto mb-16">
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate Full Stack Developer with a degree in Computer Engineering from{" "}
+              I'm a passionate Full Stack Developer with a degree in Computer
+              Engineering from{" "}
               <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
                 Savitribai Phule Pune University
-              </span>. My journey
-              into technology began with a polytechnic foundation from{" "}
+              </span>
+              . My journey into technology began with a polytechnic foundation
+              from{" "}
               <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
                 Government Polytechnic, Murtizapur
-              </span>, where I
-              developed a strong technical foundation.
+              </span>
+              , where I developed a strong technical foundation.
             </p>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               I've gained valuable industry experience working with{" "}
-              <span className="text-white">Mountreach Solutions</span>, where I honed my skills
-              in building robust Android applications. Additionally, I've worked on various WordPress projects, helping me to get more knowlwdge about the tools that used in web development.
+              <span className="text-white">Mountreach Solutions</span>, where I
+              honed my skills in building robust Android applications.
+              Additionally, I've worked on various WordPress projects, helping
+              me to get more knowlwdge about the tools that used in web
+              development.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
               My passion lies in creating{" "}
-              <span className="text-white">scalable backend systems</span> and solving complex
-              technical challenges. I believe in writing clean, maintainable code and staying
-              up-to-date with the latest technologies to deliver exceptional solutions.
+              <span className="text-white">scalable backend systems</span> and
+              solving complex technical challenges. I believe in writing clean,
+              maintainable code and staying up-to-date with the latest
+              technologies to deliver exceptional solutions.
             </p>
+            <div className="flex justify-center items-center">
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 text-center mt-5"
+                >
+                  Download Resume
+                </Button>
+              </a>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

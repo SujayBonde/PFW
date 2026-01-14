@@ -199,7 +199,7 @@ export function Contact() {
                       className="w-12 h-12 bg-gray-800/50 border border-gray-700 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-pink-500/20 hover:border-purple-500/50 text-gray-400 hover:text-white transition-all"
                       aria-label={social.label}
                     >
-                      <social.icon className="h-6 w-6" />
+                      <social.icon className="h-6 w-6 animate-pulse" />
                     </a>
                   ))}
                 </div>
@@ -227,7 +227,7 @@ export function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="mt-2 bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-purple-500"
+                      className="mt-2 bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-300 focus:border-purple-500"
                     />
                   </div>
 
@@ -243,7 +243,7 @@ export function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="mt-2 bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-purple-500"
+                      className="mt-2 bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-300 focus:border-purple-500"
                     />
                   </div>
 
@@ -258,7 +258,7 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="mt-2 min-h-[150px] bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-500 focus:border-purple-500"
+                      className="mt-2 min-h-[150px] bg-gray-900/50 border-gray-700 text-white placeholder:text-gray-300 focus:border-purple-500"
                     />
                   </div>
 
