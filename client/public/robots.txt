@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sujaybonde.vercel.app/sitemap.xml
