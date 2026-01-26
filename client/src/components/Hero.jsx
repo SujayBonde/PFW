@@ -75,7 +75,7 @@ export function Hero() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/sujay-bonde-7a3b95314"
+                href="https://www.linkedin.com/in/sujay-bonde"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:border-purple-500 hover:bg-gray-800 transition-all"

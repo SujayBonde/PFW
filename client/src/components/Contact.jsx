@@ -103,7 +103,7 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      url: "https://www.linkedin.com/in/sujay-bonde-7a3b95314",
+      url: "https://www.linkedin.com/in/sujay-bonde",
     },
     {
       icon: Twitter,
