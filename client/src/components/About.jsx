@@ -78,7 +78,7 @@ export function About() {
             </p>
             <div className="flex justify-center items-center">
               <a
-                href="/Resume.pdf"
+                href="/Sujay_Bonde_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
