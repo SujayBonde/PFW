@@ -67,3 +67,63 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ── Custom cursor ────────────────────────────────── */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* ── Typewriter cursor blink ──────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* ── Wave emoji ────────────────────────────────────── */
+@keyframes wave {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(14deg); }
+  30%  { transform: rotate(-8deg); }
+  45%  { transform: rotate(14deg); }
+  60%  { transform: rotate(-4deg); }
+  75%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+.wave-emoji {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.5s ease-in-out 1s 1;
+}
+
+/* ── Custom scrollbar ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d14;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #ec4899);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d28d9, #db2777);
+}
+
+
+
+/* ── Smooth scroll ────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection highlight ─────────────────────────── */
+::selection {
+  background: rgba(139,92,246,0.35);
+  color: #fff;
+}
