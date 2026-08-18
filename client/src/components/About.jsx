@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code, Server, Palette, Wrench } from "lucide-react";
+import { Code, Server, Palette } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function About() {
@@ -23,10 +23,10 @@ export function About() {
         "Crafting intuitive and beautiful user interfaces that delight users",
     },
     {
-      icon: Wrench,
-      title: "WordPress Development",
+      icon: Code,
+      title: "Java Full Stack Development",
       description:
-        "Experienced in custom WordPress development and freelancing projects",
+        "Building full-stack applications with Postgres, Spring-Boot and ReactJs",
     },
   ];
 

@@ -57,7 +57,7 @@ const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
 
 
 export function Hero() {
-  const roles = ["Full Stack Developer", "UI/UX Enthusiast", "Problem Solver", "MERN Stack Engineer"];
+  const roles = ["Full Stack Developer", "UI/UX Enthusiast", "Problem Solver", "MERN Stack Engineer", "Java Full Stack Developer"];
   const typedRole = useTypingEffect(roles);
 
   // Cursor-following glow
@@ -189,7 +189,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-lg text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Crafting scalable backend systems and beautiful user experiences with the MERN stack.
+              Crafting scalable backend systems and beautiful user experiences with the MERN stack and Spring-Boot.
               Passionate about turning ideas into elegant solutions.
             </motion.p>
 
