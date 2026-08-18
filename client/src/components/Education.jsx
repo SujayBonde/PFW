@@ -22,10 +22,10 @@ const education = [
 ];
 
 const certifications = [
+  "Java Full Stack Development",
   "Full Stack Web Development – MERN Stack",
   "Advanced JavaScript and React",
   "Node.js Backend Development",
-  "WordPress Theme & Plugin Development",
 ];
 
 function TimelineNode({ edu, index }) {
