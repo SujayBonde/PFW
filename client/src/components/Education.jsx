@@ -6,15 +6,15 @@ const education = [
   {
     degree: "Bachelor of Engineering in Computer Engineering",
     institution: "Savitribai Phule Pune University",
-    period: "2023 – 2027",
+    period: "2024 – 2027",
     icon: GraduationCap,
-    detail: "Building a strong foundation of technical knowledge, practical skills, and professional growth. CGPA: 8.55",
+    detail: "Building a strong foundation of technical knowledge, practical skills, and professional growth. CGPA: 8.9",
     color: "from-purple-500 to-pink-500",
   },
   {
     degree: "Diploma in Computer Engineering",
     institution: "Government Polytechnic, Murtizapur",
-    period: "2020 – 2023",
+    period: "2021 – 2024",
     icon: BookOpen,
     detail: "Transforming curiosity into knowledge, knowledge into skills, and skills into innovation. Aggregate: 82.74%",
     color: "from-pink-500 to-purple-500",
