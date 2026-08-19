@@ -104,7 +104,7 @@ export function Hero() {
       id="home"
       ref={heroRef}
       onMouseMove={handleMouseMove}
-      className="min-h-screen flex items-center pt-16 relative overflow-hidden bg-gray-950"
+      className="min-h-screen flex items-center pt-[25%] md:pt-16 relative overflow-hidden bg-gray-950"
     >
       {/* Cursor-following glow */}
       <div
