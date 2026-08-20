@@ -1,11 +1,14 @@
 import { motion } from "motion/react";
 
 const learning = [
-  { name: "Next.js", emoji: "⚡", level: 65, note: "App router, SSR, RSC" },
-  { name: "Docker", emoji: "🐳", level: 45, note: "Containers, Compose" },
-  { name: "AWS", emoji: "☁️", level: 30, note: "EC2, S3, Lambda basics" },
-  { name: "TypeScript", emoji: "📘", level: 55, note: "Types, interfaces, generics" },
+  { name: "Java", emoji: "☕", level: 80, note: "Core Java, OOP, Collections" },
+  { name: "Spring Boot", emoji: "🌱", level: 70, note: "REST APIs, JPA, Security" },
+  { name: "Hibernate/JPA", emoji: "🗄️", level: 65, note: "ORM, entity mapping" },
+  { name: "PostgreSQL", emoji: "🐘", level: 55, note: "Schemas, queries, joins" },
+  { name: "Spring Security + JWT", emoji: "🔐", level: 60, note: "Authentication, authorization" },
+  { name: "Docker", emoji: "🐳", level: 50, note: "Containerization, deployment" },
 ];
+
 
 export function CurrentlyLearning() {
   return (
