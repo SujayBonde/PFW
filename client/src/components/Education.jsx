@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { GraduationCap, Award, BookOpen, ChevronDown } from "lucide-react";
+import { GraduationCap, Award, BookOpen, ChevronDown,Pencil } from "lucide-react";
 
 const education = [
   {
@@ -18,7 +18,15 @@ const education = [
     icon: BookOpen,
     detail: "Transforming curiosity into knowledge, knowledge into skills, and skills into innovation. Aggregate: 82.74%",
     color: "from-pink-500 to-purple-500",
-  },
+  },{
+  degree: "Secondary School Certificate (SSC)",
+  institution: "J.E. School, Muktainagar",
+  period: "2020 – 2021",
+  icon: Pencil,
+  detail: "Laying the academic foundation with dedication and discipline. Percentage: 82.20%",
+  color: "from-pink-500 to-purple-500",
+}
+
 ];
 
 const certifications = [
