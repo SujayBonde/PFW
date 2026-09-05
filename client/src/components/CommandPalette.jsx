@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Search, User, Briefcase, Code, Mail, Download, GraduationCap, X } from "lucide-react";
+import { Search, User, Briefcase, Code, Mail, Download, GraduationCap, Sprout, X } from "lucide-react";
 
 const COMMANDS = [
   { id: "about", label: "About Me", icon: User, section: "about", desc: "Learn about Sujay" },
   { id: "education", label: "Education", icon: GraduationCap, section: "education", desc: "Academic background" },
   { id: "skills", label: "Skills", icon: Code, section: "skills", desc: "Technologies & expertise" },
   { id: "projects", label: "Projects", icon: Briefcase, section: "projects", desc: "View featured work" },
+  { id: "learning", label: "Java Focus", icon: Sprout, section: "learning", desc: "Java full-stack roadmap" },
   { id: "contact", label: "Contact Me", icon: Mail, section: "contact", desc: "Get in touch" },
   {
     id: "resume",

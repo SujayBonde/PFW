@@ -15,7 +15,7 @@ export function Navigation() {
 
   // Active section via IntersectionObserver
   useEffect(() => {
-    const sectionIds = ["home", "about", "education", "skills", "projects", "contact"];
+    const sectionIds = ["home", "about", "education", "skills", "projects", "learning", "contact"];
     const observers = [];
 
     sectionIds.forEach((id) => {
@@ -47,6 +47,7 @@ export function Navigation() {
     { label: "Education", id: "education" },
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
+    { label: "Java Focus", id: "learning" },
     { label: "Contact", id: "contact" },
   ];
 

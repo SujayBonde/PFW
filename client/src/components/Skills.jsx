@@ -13,7 +13,15 @@ const skillsData = {
     { name: "Responsive Design", level: 88, note: "Mobile-first approach" },
     { name: "UI/UX Design", level: 78, note: "Figma, user flows" },
   ],
-  Backend: [
+  "Java Backend": [
+    { name: "Java", level: 80, note: "Core Java, OOP, Collections" },
+    { name: "Spring Boot", level: 70, note: "REST APIs, MVC, configuration" },
+    { name: "Spring Data JPA", level: 65, note: "Repositories, relationships, queries" },
+    { name: "Hibernate", level: 65, note: "ORM and entity mapping" },
+    { name: "Spring Security", level: 60, note: "JWT authentication and authorization" },
+    { name: "PostgreSQL", level: 60, note: "Schemas, joins, indexing" },
+  ],
+  "MERN Backend": [
     { name: "Node.js", level: 83, note: "REST APIs, middleware" },
     { name: "Express.js", level: 85, note: "Routing, auth, error handling" },
     { name: "RESTful APIs", level: 87, note: "Design & implementation" },
@@ -43,7 +51,7 @@ const skillsData = {
   ],
 };
 
-const TABS = ["All", "Frontend", "Backend", "Tools", "Competencies"];
+const TABS = ["All", "Frontend", "Java Backend", "MERN Backend", "Tools", "Competencies"];
 
 function SkillBadge({ skill, delay }) {
   const [showTip, setShowTip] = useState(false);

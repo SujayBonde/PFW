@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code, Server, Palette } from "lucide-react";
+import { Code, Server, Palette, Database } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function About() {
@@ -12,7 +12,7 @@ export function About() {
     },
     {
       icon: Server,
-      title: "Backend Expertise",
+      title: "Backend Engineering",
       description:
         "Passionate about creating scalable backend systems and troubleshooting complex issues",
     },
@@ -23,10 +23,10 @@ export function About() {
         "Crafting intuitive and beautiful user interfaces that delight users",
     },
     {
-      icon: Code,
+      icon: Database,
       title: "Java Full Stack Development",
       description:
-        "Building full-stack applications with Postgres, Spring-Boot and ReactJs",
+        "Building RESTful applications with Java, Spring Boot, Hibernate/JPA, PostgreSQL, and React",
     },
   ];
 
@@ -66,7 +66,7 @@ export function About() {
               <span className="text-white">Mountreach Solutions</span>, where I
               honed my skills in building robust Android applications.
               Additionally, I've worked on various WordPress projects, helping
-              me to get more knowlwdge about the tools that used in web
+              me to gain more knowledge about the tools used in web
               development.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">

@@ -21,7 +21,9 @@ export function CurrentlyLearning() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl font-bold text-center mb-4 text-white">Currently Learning</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4" />
-          <p className="text-center text-gray-500 text-sm mb-12">Actively levelling up these technologies</p>
+          <p className="text-center text-gray-500 text-sm mb-12">
+            Building the Java full-stack foundation alongside my MERN development experience
+          </p>
 
           <div className="space-y-5">
             {learning.map((item, i) => (
