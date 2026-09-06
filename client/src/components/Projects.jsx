@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import eCommerceImage from "../assets/e-commerce-image.png";
 import travelConnect from "../assets/travel-connect-image.png";
-import expenseTracker from "../assets/expense-tracker-image.png";
+import roommateExpenceManager from "../assets/roommates-expence-tracker.png";
 import weatherApp from "../assets/weather-app-image.png";
 import pingupImage from "../assets/pingup-image.png";
 import quickChat from "../assets/quick-chat-image.png";
@@ -44,14 +44,14 @@ const projects = [
     tags: ["Full Stack", "Web Apps"],
   },
   {
-    title: "Expense Tracker",
+    title: "Roommates Expence Manager",
     description:
-      "A full-stack web app that helps users manage personal finances by tracking income and expenses. Features secure JWT authentication, CRUD operations for transactions, category-wise analytics with charts, and budget management tools.",
-    image: expenseTracker,
-    techStack: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS", "RESTful API"],
-    github: "https://github.com/SujayBonde/Expense-Tracker-MERN/",
-    demo: "https://expense-tracker-by-sujay.vercel.app",
-    tags: ["Full Stack", "Web Apps"],
+      "A Java full-stack web app that helps roommates manage personal finances by tracking loans and expenses. Features secure JWT authentication, CRUD operations for transactions, category-wise analytics with charts, and budget management tools.",
+    image: roommateExpenceManager,
+    techStack: ["React", "Java", "Spring-Boot", "PostgreSQL", "TailwindCSS", "RESTful API","JWT Auth"],
+    github: "https://github.com/SujayBonde/Roommates-Expense-Manager",
+    demo: "https://roommates-expense-manager.vercel.app",
+    tags: ["Java Full Stack", "Web Apps"],
   },
   {
     title: "Weather App",

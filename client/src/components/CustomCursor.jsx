@@ -57,7 +57,7 @@ export function CustomCursor() {
       {/* Inner dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 z-[9999] pointer-events-none w-2 h-2 rounded-full bg-purple-400 mix-blend-difference transition-transform duration-75"
+        className="fixed top-0 left-0 z-[9999] pointer-events-none w-3 h-3 rounded-full bg-white mix-blend-difference transition-transform duration-75"
         style={{ willChange: "transform" }}
       />
       {/* Outer ring */}
