@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 require('dotenv').config();
+const { generateEmailTemplate, generatePlainText } = require('./emailTemplate');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -38,24 +39,17 @@ app.post('/api/contact', async (req, res) => {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
+    const timestamp = new Date();
+    const verifiedSender = process.env.EMAIL_FROM || 'sujaybonde2005@gmail.com';
+    const recipientEmail = process.env.EMAIL_TO || 'sujaybonde2005@gmail.com';
+
     const mailOptions = {
-        from: 'sujaybonde2005@gmail.com', // Must be your verified sender in Brevo
-        to: 'sujaybonde2005@gmail.com',
+        from: `"Portfolio Contact" <${verifiedSender}>`,
+        to: recipientEmail,
         replyTo: email,
-        subject: `New Contact Form Submission from ${name}`,
-        text: `
-            Name: ${name}
-            Email: ${email}
-            Message:
-            ${message}
-        `,
-        html: `
-            <h3>New Contact Form Submission</h3>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Message:</strong></p>
-            <p>${message}</p>
-        `
+        subject: `✨ New Portfolio Message from ${name}`,
+        text: generatePlainText({ name, email, message, timestamp }),
+        html: generateEmailTemplate({ name, email, message, timestamp })
     };
 
     try {
@@ -73,6 +67,18 @@ app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
+// Preview email template in browser
+app.get('/api/preview-mail', (req, res) => {
+    const previewHtml = generateEmailTemplate({
+        name: 'Alex Johnson',
+        email: 'alex.design@example.com',
+        message: 'Hi Sujay,\n\nI really liked your portfolio and projects! I would love to discuss a freelance web development project with you. Are you available for a quick chat next week?\n\nBest regards,\nAlex'
+    });
+    res.setHeader('Content-Type', 'text/html');
+    res.send(previewHtml);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
