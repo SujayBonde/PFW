@@ -1,117 +1,134 @@
-import { motion } from "motion/react";
-import { Code, Server, Palette, Database } from "lucide-react";
-import { Button } from "./ui/button";
+import React from "react";
+import {
+  GraduationCap,
+  MapPin,
+  FolderGit2,
+  Brain,
+  Download,
+} from "lucide-react";
 
-export function About() {
-  const highlights = [
-    {
-      icon: Code,
-      title: "MERN Stack Development",
-      description:
-        "Building full-stack applications with MongoDB, Express, React, and Node.js",
-    },
-    {
-      icon: Server,
-      title: "Backend Engineering",
-      description:
-        "Passionate about creating scalable backend systems and troubleshooting complex issues",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description:
-        "Crafting intuitive and beautiful user interfaces that delight users",
-    },
-    {
-      icon: Database,
-      title: "Java Full Stack Development",
-      description:
-        "Building RESTful applications with Java, Spring Boot, Hibernate/JPA, PostgreSQL, and React",
-    },
-  ];
-
+export const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-950 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <section
+      id="about"
+      className="relative py-24 px-6 md:px-16 bg-[#050816] text-white overflow-hidden"
+    >
+      {/* Background Glow */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-500/20 blur-[120px] rounded-full"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl text-center mb-4 text-white">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-12"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <p className="text-pink-400 uppercase tracking-widest text-sm mb-2">
+            Get To Know Me
+          </p>
 
-          <div className="max-w-3xl mx-auto mb-16">
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate Full Stack Developer with a degree in Computer
-              Engineering from{" "}
-              <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-                Savitribai Phule Pune University
-              </span>
-              . My journey into technology began with a polytechnic foundation
-              from{" "}
-              <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-                Government Polytechnic, Murtizapur
-              </span>
-              , where I developed a strong technical foundation.
+          <h2 className="text-4xl md:text-5xl font-bold">
+            About <span className="text-pink-500">Me</span>
+          </h2>
+
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-4"></div>
+        </div>
+
+        {/* Main Layout */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          {/* Left Content */}
+          <div>
+            <h3 className="text-3xl font-semibold mb-6 leading-tight">
+              Final Year Computer Engineering Student &
+              <span className="text-pink-500"> Java Full Stack Developer</span>
+            </h3>
+
+            <p className="text-gray-300 leading-8 mb-5">
+              I'm <span className="text-pink-400 font-medium">Sujay Bonde</span>,
+              a final-year Computer Engineering student from Pune, Maharashtra.
+              I enjoy building secure and scalable web applications using modern
+              backend technologies.
             </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              I've gained valuable industry experience working with{" "}
-              <span className="text-white">Mountreach Solutions</span>, where I
-              honed my skills in building robust Android applications.
-              Additionally, I've worked on various WordPress projects, helping
-              me to gain more knowledge about the tools used in web
-              development.
+
+            <p className="text-gray-400 leading-8 mb-5">
+              My primary stack includes{" "}
+              <span className="text-white font-medium">Java, Spring Boot, React, PostgreSQL, JWT Authentication, Docker,</span>{" "}
+              and REST APIs. I'm passionate about backend development, API
+              security, and solving real-world problems through full-stack
+              projects.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              My passion lies in creating{" "}
-              <span className="text-white">scalable backend systems</span> and
-              solving complex technical challenges. I believe in writing clean,
-              maintainable code and staying up-to-date with the latest
-              technologies to deliver exceptional solutions.
+
+            <p className="text-gray-400 leading-8 mb-8">
+              Currently preparing for software engineering placements while
+              strengthening my Data Structures & Algorithms, Spring Security, and
+              deployment skills.
             </p>
-            <div className="flex justify-center items-center">
-              <a
-                href="/Sujay_Bonde_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 text-center mt-5"
-                >
-                  Download Resume
-                </Button>
-              </a>
+
+            {/* Resume Button */}
+            <a
+              href="/public/Sujay_Bonde_Resume.pdf"
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 rounded-full font-medium hover:scale-105 transition duration-300 shadow-lg shadow-pink-500/20"
+            >
+              <Download size={18} />
+              Download Resume
+            </a>
+          </div>
+
+          {/* Right Cards */}
+          <div className="grid grid-cols-2 gap-5">
+            {/* Card 1 */}
+            <div className="bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6 hover:border-pink-500 hover:-translate-y-2 transition duration-300">
+              <GraduationCap className="text-pink-400 mb-4" size={34} />
+
+              <h4 className="font-semibold text-lg mb-2">Education</h4>
+
+              <p className="text-gray-400 text-sm leading-6">
+                BE Computer Engineering
+                <br />
+                SPPU • Final Year
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6 hover:border-pink-500 hover:-translate-y-2 transition duration-300">
+              <MapPin className="text-pink-400 mb-4" size={34} />
+
+              <h4 className="font-semibold text-lg mb-2">Location</h4>
+
+              <p className="text-gray-400 text-sm leading-6">
+                Pune,
+                <br />
+                Maharashtra, India
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6 hover:border-pink-500 hover:-translate-y-2 transition duration-300">
+              <FolderGit2 className="text-pink-400 mb-4" size={34} />
+
+              <h4 className="font-semibold text-lg mb-2">Projects</h4>
+
+              <p className="text-gray-400 text-sm leading-6">
+                5+ Full Stack
+                <br />
+                Java & React Projects
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white/5 backdrop-blur-md border border-purple-500/20 rounded-2xl p-6 hover:border-pink-500 hover:-translate-y-2 transition duration-300">
+              <Brain className="text-pink-400 mb-4" size={34} />
+
+              <h4 className="font-semibold text-lg mb-2">Focus</h4>
+
+              <p className="text-gray-400 text-sm leading-6">
+                Backend Development
+                <br />
+                Spring Security • JWT • APIs
+              </p>
             </div>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-4 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all border border-purple-500/20 group-hover:border-purple-500/40">
-                  <item.icon className="h-8 w-8 text-purple-400 group-hover:text-purple-300 transition-colors" />
-                </div>
-                <h3 className="mb-2 text-white">{item.title}</h3>
-                <p className="text-gray-400">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
-}
+};

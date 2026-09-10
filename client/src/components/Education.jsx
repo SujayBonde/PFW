@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { GraduationCap, Award, BookOpen, ChevronDown,Pencil } from "lucide-react";
+import {
+  GraduationCap,
+  Award,
+  BookOpen,
+  ChevronDown,
+  Pencil,
+} from "lucide-react";
 
 const education = [
   {
@@ -8,7 +14,8 @@ const education = [
     institution: "Savitribai Phule Pune University",
     period: "2024 – 2027",
     icon: GraduationCap,
-    detail: "Building a strong foundation of technical knowledge, practical skills, and professional growth. CGPA: 8.9",
+    detail:
+      "Building a strong foundation of technical knowledge, practical skills, and professional growth. CGPA: 8.9",
     color: "from-purple-500 to-pink-500",
   },
   {
@@ -16,17 +23,19 @@ const education = [
     institution: "Government Polytechnic, Murtizapur",
     period: "2021 – 2024",
     icon: BookOpen,
-    detail: "Transforming curiosity into knowledge, knowledge into skills, and skills into innovation. Aggregate: 82.74%",
+    detail:
+      "Transforming curiosity into knowledge, knowledge into skills, and skills into innovation. Aggregate: 82.74%",
     color: "from-pink-500 to-purple-500",
-  },{
-  degree: "Secondary School Certificate (SSC)",
-  institution: "J.E. School, Muktainagar",
-  period: "2020 – 2021",
-  icon: Pencil,
-  detail: "Laying the academic foundation with dedication and discipline. Percentage: 82.20%",
-  color: "from-pink-500 to-purple-500",
-}
-
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    institution: "J.E. School, Muktainagar",
+    period: "2020 – 2021",
+    icon: Pencil,
+    detail:
+      "Laying the academic foundation with dedication and discipline. Percentage: 82.20%",
+    color: "from-pink-500 to-purple-500",
+  },
 ];
 
 const certifications = [
@@ -42,8 +51,12 @@ function TimelineNode({ edu, index }) {
   const Icon = edu.icon;
 
   return (
-    <div className={`relative flex items-start gap-6 md:gap-0 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}>
-      {/* Content card */}
+    <div
+      className={`relative flex items-start gap-4 md:gap-0 ${
+        isLeft ? "md:flex-row" : "md:flex-row-reverse"
+      }`}
+    >
+      {/* Content Card */}
       <motion.div
         initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -53,44 +66,56 @@ function TimelineNode({ edu, index }) {
       >
         <div
           onClick={() => setExpanded(!expanded)}
-          className="bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 rounded-xl p-5 cursor-pointer
-                     transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 group"
+          className="bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 rounded-xl p-4 cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 group"
         >
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-start gap-3">
-              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${edu.color} flex items-center justify-center shrink-0`}>
+              <div
+                className={`w-10 h-10 rounded-lg bg-gradient-to-br ${edu.color} flex items-center justify-center shrink-0`}
+              >
                 <Icon className="h-5 w-5 text-white" />
               </div>
+
               <div>
                 <h3 className="text-base font-semibold text-white leading-snug group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all">
                   {edu.degree}
                 </h3>
-                <p className={`text-sm bg-gradient-to-r ${edu.color} bg-clip-text text-transparent mt-0.5`}>
+
+                <p
+                  className={`text-sm bg-gradient-to-r ${edu.color} bg-clip-text text-transparent mt-0.5`}
+                >
                   {edu.institution}
                 </p>
+
                 <p className="text-xs text-gray-500 mt-1">{edu.period}</p>
               </div>
             </div>
+
             <ChevronDown
-              className={`h-4 w-4 text-gray-500 shrink-0 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+              className={`h-4 w-4 text-gray-500 shrink-0 transition-transform duration-300 ${
+                expanded ? "rotate-180" : ""
+              }`}
             />
           </div>
 
-          {/* Expandable detail */}
+          {/* Expandable Detail */}
           <motion.div
             initial={false}
-            animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}
+            animate={{
+              height: expanded ? "auto" : 0,
+              opacity: expanded ? 1 : 0,
+            }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="mt-3 pt-3 border-t border-gray-700 text-sm text-gray-400 leading-relaxed">
+            <p className="mt-2 pt-2 border-t border-gray-700 text-sm text-gray-400 leading-relaxed">
               {edu.detail}
             </p>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* Center dot */}
+      {/* Center Dot */}
       <div className="hidden md:flex w-2/12 justify-center relative">
         <motion.div
           initial={{ scale: 0 }}
@@ -101,7 +126,7 @@ function TimelineNode({ edu, index }) {
         />
       </div>
 
-      {/* Empty side */}
+      {/* Empty Side */}
       <div className="hidden md:block md:w-5/12" />
     </div>
   );
@@ -109,24 +134,37 @@ function TimelineNode({ edu, index }) {
 
 export function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-900 relative overflow-hidden">
+    <section
+      id="education"
+      className="py-16 bg-gray-900 relative overflow-hidden"
+    >
+      {/* Background Glow */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">Education</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-14" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* Section Heading */}
+          <h2 className="text-4xl font-bold text-center mb-3 text-white">
+            Education
+          </h2>
+
+          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-10" />
 
           {/* Timeline */}
           <div className="relative">
-            {/* Vertical line */}
+            {/* Vertical Line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/50 via-pink-500/30 to-transparent -translate-x-1/2" />
 
-            <div className="space-y-10">
-              {education.map((edu, i) => (
-                <TimelineNode key={i} edu={edu} index={i} />
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <TimelineNode key={index} edu={edu} index={index} />
               ))}
             </div>
           </div>
@@ -137,25 +175,30 @@ export function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-14 bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm"
+            className="mt-10 bg-gray-800/30 border border-gray-700/50 rounded-xl p-5 backdrop-blur-sm"
           >
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center">
                 <Award className="h-5 w-5 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Certifications & Courses</h3>
+
+              <h3 className="text-xl font-semibold text-white">
+                Certifications & Courses
+              </h3>
             </div>
+
             <div className="grid md:grid-cols-2 gap-3">
-              {certifications.map((cert, i) => (
+              {certifications.map((cert, index) => (
                 <motion.div
-                  key={i}
+                  key={index}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="flex items-center gap-2.5 bg-gray-900/40 rounded-lg px-4 py-2.5 border border-gray-700/40"
+                  transition={{ duration: 0.4, delay: index * 0.07 }}
+                  className="flex items-center gap-2.5 bg-gray-900/40 rounded-lg px-3 py-2 border border-gray-700/40"
                 >
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shrink-0" />
+
                   <span className="text-gray-300 text-sm">{cert}</span>
                 </motion.div>
               ))}

@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
-import { ArrowRight, Github, Linkedin, Twitter, Sparkles, ChevronDown, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin, CodeXml, Sparkles, ChevronDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import pf_image from "../assets/PF_image.png";
@@ -189,8 +189,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-lg text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Building production-ready web applications across the Java and MERN ecosystems with Spring Boot,
-              React, Node.js, and modern database design. Passionate about turning ideas into elegant solutions.
+              Final Year Computer Engineering student specializing in MERN and Java Full Stack Development. I build secure REST APIs using Spring Boot, JWT Authentication, PostgreSQL, Docker, and React. Passionate about solving real-world problems through scalable web applications.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -229,7 +228,7 @@ export function Hero() {
               {[
                 { href: "https://github.com/SujayBonde", Icon: Github, label: "GitHub" },
                 { href: "https://www.linkedin.com/in/sujay-bonde", Icon: Linkedin, label: "LinkedIn" },
-                { href: "https://x.com/Sujay_Bonde", Icon: Twitter, label: "Twitter" },
+                { href: "https://leetcode.com/u/Sujay_Bonde", Icon: CodeXml, label: "LeetCode" },
               ].map(({ href, Icon, label }) => (
                 <a
                   key={label}
