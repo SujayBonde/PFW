@@ -2,7 +2,8 @@ import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
 import { ArrowRight, Github, Linkedin, CodeXml, Sparkles, ChevronDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import pf_image from "../assets/PF_image.png";
+// import pf_image from "../assets/PF_image.png";
+import pf_image2 from "../assets/PF-image2.png";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 // ─── Typing hook ────────────────────────────────────────────────────────────
@@ -57,7 +58,7 @@ const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
 
 
 export function Hero() {
-  const roles = ["Full Stack Developer", "Java + MERN Developer", "Spring Boot Engineer", "MERN Stack Engineer", "Problem Solver"];
+  const roles = ["Java Full Stack Developer", "MERN Stack Developer"];
   const typedRole = useTypingEffect(roles);
 
   // Cursor-following glow
@@ -130,6 +131,18 @@ export function Hero() {
           {/* ── Left column ─────────────────────────────────────────── */}
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="flex flex-col items-center lg:items-start text-center lg:text-left mt-8 lg:mt-0">
 
+            <div className="md:flex md:gap-3">
+            {/* Welcome tag */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6 lg:ml-3"
+            >
+              <Sparkles className="h-4 w-4 text-purple-400" />
+              <span className="text-purple-300 text-sm">Welcome to My Portfolio</span>
+            </motion.div>
+
             {/* Status badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -143,17 +156,8 @@ export function Hero() {
               </span>
               <span className="text-emerald-400 text-sm font-medium">Available for opportunities</span>
             </motion.div>
-
-            {/* Welcome tag */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6 lg:ml-3"
-            >
-              <Sparkles className="h-4 w-4 text-purple-400" />
-              <span className="text-purple-300 text-sm">Welcome to My Portfolio</span>
-            </motion.div>
+            </div>
+            
 
             {/* Heading */}
             <motion.h1
@@ -249,7 +253,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto"
+            className="relative w-[60%] sm:max-w-md lg:max-w-xl mx-auto"
           >
             <div className="relative w-full">
               {/* Outer glow */}
@@ -264,9 +268,9 @@ export function Hero() {
                 className="relative rounded-2xl p-1 bg-gradient-to-br from-purple-500 via-pink-500 to-purple-500 cursor-pointer shadow-2xl"
               >
                 <ImageWithFallback
-                  src={pf_image}
+                  src={pf_image2}
                   alt="Sujay — Full Stack Developer"
-                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  className="relative rounded-2xl shadow-2xl w-55 sm:w-70 md:w-95 h-auto object-cover"
                 />
                 {/* Subtle overlay on hover */}
                 <div className="absolute inset-1 rounded-2xl bg-gradient-to-t from-purple-900/30 via-transparent to-transparent pointer-events-none" />
