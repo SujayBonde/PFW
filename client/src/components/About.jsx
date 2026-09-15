@@ -63,7 +63,7 @@ export const About = () => {
 
             {/* Resume Button */}
             <a
-              href="/public/Sujay_Bonde_Resume.pdf"
+              href="/Sujay_Bonde_Resume.pdf"
               target="_blank"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 rounded-full font-medium hover:scale-105 transition duration-300 shadow-lg shadow-pink-500/20"
             >
