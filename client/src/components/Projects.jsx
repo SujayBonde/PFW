@@ -10,6 +10,7 @@ import roommateExpenceManager from "../assets/roommates-expence-tracker.png";
 import weatherApp from "../assets/weather-app-image.png";
 import pingupImage from "../assets/pingup-image.png";
 import quickChat from "../assets/quick-chat-image.png";
+import blogImage from "../assets/blog-space-image.png";
 
 const projects = [
   {
@@ -17,7 +18,17 @@ const projects = [
     description:
       "PingUp — a feature-rich social media ecosystem built with the MERN stack. PingUp enables users to discover peers, share media through posts and stories, and stay connected via real-time messaging. It's a complete demonstration of full-stack CRUD operations, complex database relationships, and bi-directional communication.",
     image: pingupImage,
-    techStack: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS", "RESTful API", "Redux", "Inngest", "Imagekit"],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+      "RESTful API",
+      "Redux",
+      "Inngest",
+      "Imagekit",
+    ],
     github: "https://github.com/SujayBonde/PingUp",
     demo: "https://ping-up-by-sujay.vercel.app",
     tags: ["Full Stack", "Web Apps"],
@@ -28,17 +39,49 @@ const projects = [
     description:
       "Full-featured e-commerce platform with user authentication, product catalog, shopping cart. Built with MERN stack. Includes an admin panel to add, view, delete products and to track or update order status.",
     image: eCommerceImage,
-    techStack: ["React", "NodeJS", "Express", "MongoDB", "Tailwind CSS", "RESTful API"],
+    techStack: [
+      "React",
+      "NodeJS",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "RESTful API",
+    ],
     github: "https://github.com/SujayBonde/e-commerce-mern-frontend",
     demo: "https://e-commerce-mern-ten-virid.vercel.app",
     tags: ["Full Stack", "Web Apps"],
+  },
+  {
+    title: "Blog Application",
+    description:
+      "Full-stack blog platform with JWT authentication, blog creation and management, categories, tags, comments, likes, search, pagination, and role-based access control. Built with React, Spring Boot, Spring Security, and PostgreSQL. Includes an admin dashboard to manage users, blogs, categories, and comments.",
+    image: blogImage,
+    techStack: [
+      "React",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "JWT",
+      "Tailwind CSS",
+      "RESTful API",
+    ],
+    github: "https://github.com/SujayBonde/blog-application",
+    demo: "https://blog-space-by-sujay.vercel.app",
+    tags: ["Full Stack", "Blog", "Java", "Spring Boot"],
   },
   {
     title: "Travel Blog Website",
     description:
       "TravelConnect is a lightweight travel blog platform where users can share bus journey stories, discover new travel tips, and connect with fellow explorers through forums and storytelling. Built with React and hosted on Netlify.",
     image: travelConnect,
-    techStack: ["React", "Express", "MongoDB", "TailwindCSS", "NodeJS", "RESTful API"],
+    techStack: [
+      "React",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+      "NodeJS",
+      "RESTful API",
+    ],
     github: "https://github.com/SujayBonde/Travel-Community",
     demo: "https://travelconnect.netlify.app",
     tags: ["Full Stack", "Web Apps"],
@@ -48,7 +91,15 @@ const projects = [
     description:
       "A Java full-stack web app that helps roommates manage personal finances by tracking loans and expenses. Features secure JWT authentication, CRUD operations for transactions, category-wise analytics with charts, and budget management tools.",
     image: roommateExpenceManager,
-    techStack: ["React", "Java", "Spring-Boot", "PostgreSQL", "TailwindCSS", "RESTful API","JWT Auth"],
+    techStack: [
+      "React",
+      "Java",
+      "Spring-Boot",
+      "PostgreSQL",
+      "TailwindCSS",
+      "RESTful API",
+      "JWT Auth",
+    ],
     github: "https://github.com/SujayBonde/Roommates-Expense-Manager",
     demo: "https://roommates-expense-manager.vercel.app",
     tags: ["Java Full Stack", "Web Apps"],
@@ -68,7 +119,14 @@ const projects = [
     description:
       "Real-time messaging application with private and group chats, file sharing, and notification system. WebSocket implementation for instant messaging.",
     image: quickChat,
-    techStack: ["React", "Node.js", "Socket.io", "MongoDB", "Express", "RESTful API"],
+    techStack: [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "Express",
+      "RESTful API",
+    ],
     github: "https://github.com/SujayBonde/chat-app",
     demo: "https://chat-app-silk-two-49.vercel.app",
     tags: ["Full Stack", "Web Apps"],
@@ -117,8 +175,12 @@ function ProjectModal({ project, onClose }) {
 
           {/* Content */}
           <div className="p-6">
-            <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-            <p className="text-gray-400 leading-relaxed mb-5">{project.description}</p>
+            <h3 className="text-2xl font-bold text-white mb-3">
+              {project.title}
+            </h3>
+            <p className="text-gray-400 leading-relaxed mb-5">
+              {project.description}
+            </p>
 
             {/* Tech stack */}
             <div className="flex flex-wrap gap-2 mb-6">
@@ -134,13 +196,26 @@ function ProjectModal({ project, onClose }) {
 
             {/* Links */}
             <div className="flex gap-3">
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
                 <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0">
                   <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                 </Button>
               </a>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
-                <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <Button
+                  variant="outline"
+                  className="w-full border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
+                >
                   <Github className="mr-2 h-4 w-4" /> GitHub
                 </Button>
               </a>
@@ -218,12 +293,19 @@ function ProjectCard({ project, index, onClick }) {
         </p>
         <div className="flex flex-wrap gap-1.5">
           {project.techStack.slice(0, 4).map((t, i) => (
-            <Badge key={i} variant="secondary" className="bg-gray-900/70 text-gray-300 border-gray-700 text-xs">
+            <Badge
+              key={i}
+              variant="secondary"
+              className="bg-gray-900/70 text-gray-300 border-gray-700 text-xs"
+            >
               {t}
             </Badge>
           ))}
           {project.techStack.length > 4 && (
-            <Badge variant="secondary" className="bg-gray-900/70 text-gray-400 border-gray-700 text-xs">
+            <Badge
+              variant="secondary"
+              className="bg-gray-900/70 text-gray-400 border-gray-700 text-xs"
+            >
               +{project.techStack.length - 4}
             </Badge>
           )}
@@ -240,7 +322,8 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filtered = projects.filter((p) => {
-    const matchesFilter = activeFilter === "All" || p.tags.includes(activeFilter);
+    const matchesFilter =
+      activeFilter === "All" || p.tags.includes(activeFilter);
     const q = searchQuery.toLowerCase();
     const matchesSearch =
       !q ||
@@ -251,7 +334,10 @@ export function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 bg-gray-900 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-gray-900 relative overflow-hidden"
+    >
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
       </div>
@@ -263,7 +349,9 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-4 text-white">
+            Featured Projects
+          </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8" />
 
           {/* Filter tabs + search */}
@@ -335,7 +423,10 @@ export function Projects() {
 
       {/* Modal */}
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
       )}
     </section>
   );
